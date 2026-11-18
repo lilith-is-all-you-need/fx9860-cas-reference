@@ -1,0 +1,133 @@
+{
+  "changedCoreMembers": [
+    "kintgab.o",
+    "ksym2poly.o"
+  ],
+  "mathCoreSha256": "c9e9a3afc0b40c80239b57777b396fcc1d3c0b3a5286a6708e525d2d2ab822cc",
+  "mappedPages": 701,
+  "hostUiTests": {
+    "legacyGroups": 13,
+    "repeatedViews": 500,
+    "rendererChecks": 895581,
+    "byteFuzz": 30000,
+    "generatedFormulas": 5000,
+    "sanitizers": "ASan/UBSan passed"
+  },
+  "kernelTests": {
+    "mathCases": 26,
+    "sharedMathCases": 14,
+    "injectedAllocationFailures": 1422,
+    "cancellations": 6,
+    "hostSanitizers": "ASan/UBSan/LSan passed",
+    "finalParentPoolEmpty": true
+  },
+  "screensReviewed": [
+    {
+      "scenario": "startup",
+      "image": "integrations\\preview-kernel-20261117\\evidence\\final-release\\responses\\0027.bmp",
+      "method": "reviewed framebuffer plus state/allocator trace from normal keys; no target memory writes",
+      "passed": true
+    },
+    {
+      "scenario": "fraction",
+      "image": "integrations\\preview-kernel-20261117\\evidence\\final-release\\responses\\0094.bmp",
+      "method": "reviewed framebuffer plus state/allocator trace from normal keys; no target memory writes",
+      "passed": true
+    },
+    {
+      "scenario": "simplify",
+      "image": "integrations\\preview-kernel-20261117\\evidence\\final-release\\responses\\0106.bmp",
+      "method": "reviewed framebuffer plus state/allocator trace from normal keys; no target memory writes",
+      "passed": true
+    },
+    {
+      "scenario": "solve",
+      "image": "integrations\\preview-kernel-20261117\\evidence\\final-release\\responses\\0128.bmp",
+      "method": "reviewed framebuffer plus state/allocator trace from normal keys; no target memory writes",
+      "passed": true
+    },
+    {
+      "scenario": "plot",
+      "image": "integrations\\preview-kernel-20261117\\evidence\\final-release\\responses\\0140.bmp",
+      "method": "reviewed framebuffer plus state/allocator trace from normal keys; no target memory writes",
+      "passed": true
+    },
+    {
+      "scenario": "integral-source-correct",
+      "image": "integrations\\preview-kernel-20261117\\evidence\\final-release\\responses\\0180.bmp",
+      "method": "reviewed framebuffer plus state/allocator trace from normal keys; no target memory writes",
+      "passed": true
+    },
+    {
+      "scenario": "integral-result-correct",
+      "image": "integrations\\preview-kernel-20261117\\evidence\\final-release\\responses\\0185.bmp",
+      "method": "reviewed framebuffer plus state/allocator trace from normal keys; no target memory writes",
+      "passed": true
+    },
+    {
+      "scenario": "long-output",
+      "image": "integrations\\preview-kernel-20261117\\evidence\\final-release\\responses\\0202.bmp",
+      "method": "reviewed framebuffer plus state/allocator trace from normal keys; no target memory writes",
+      "passed": true
+    },
+    {
+      "scenario": "long-output-end",
+      "image": "integrations\\preview-kernel-20261117\\evidence\\final-release\\responses\\0213.bmp",
+      "method": "reviewed framebuffer plus state/allocator trace from normal keys; no target memory writes",
+      "passed": true
+    },
+    {
+      "scenario": "assignment",
+      "image": "integrations\\preview-kernel-20261117\\evidence\\final-release\\responses\\0223.bmp",
+      "method": "reviewed framebuffer plus state/allocator trace from normal keys; no target memory writes",
+      "passed": true
+    },
+    {
+      "scenario": "oom",
+      "image": "integrations\\preview-kernel-20261117\\evidence\\final-release\\responses\\0246.bmp",
+      "method": "reviewed framebuffer plus state/allocator trace from normal keys; no target memory writes",
+      "passed": true
+    },
+    {
+      "scenario": "oom-recovery",
+      "image": "integrations\\preview-kernel-20261117\\evidence\\final-release\\responses\\0254.bmp",
+      "method": "reviewed framebuffer plus state/allocator trace from normal keys; no target memory writes",
+      "passed": true
+    },
+    {
+      "scenario": "exit",
+      "image": "integrations\\preview-kernel-20261117\\evidence\\final-release\\responses\\0257.bmp",
+      "method": "reviewed framebuffer plus state/allocator trace from normal keys; no target memory writes",
+      "passed": true
+    },
+    {
+      "scenario": "reentry",
+      "image": "integrations\\preview-kernel-20261117\\evidence\\final-release\\responses\\0303.bmp",
+      "method": "reviewed framebuffer plus state/allocator trace from normal keys; no target memory writes",
+      "passed": true
+    },
+    {
+      "scenario": "fresh-variable",
+      "image": "integrations\\preview-kernel-20261117\\evidence\\final-release\\responses\\0310.bmp",
+      "method": "reviewed framebuffer plus state/allocator trace from normal keys; no target memory writes",
+      "passed": true
+    },
+    {
+      "scenario": "menu-exit",
+      "image": "integrations\\preview-kernel-20261117\\evidence\\final-release\\responses\\0312.bmp",
+      "method": "reviewed framebuffer plus state/allocator trace from normal keys; no target memory writes",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "No physical RAM or total storage increase; no speed improvement claim",
+    "2D 128 nodes/12 levels; complete text fallback; matrix cells are not laid out in a grid",
+    "Text input with optional 2D preview, not structural formula editing; settings reset on launch",
+    "Input/result buffers remain 96/1024 B",
+    "Firmware-assisted HLE cannot certify physical OS, cache timing, power-off, or every CAS low-memory path"
+  ],
+  "casArenaBytes": 32768,
+  "casTrackerLimitBytes": 24576,
+  "staticRamIncreaseBytes": 2352,
+  "pythonRuntimeSymbols": false
+}

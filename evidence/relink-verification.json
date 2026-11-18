@@ -1,0 +1,10 @@
+{
+  "date": "2026-11-19",
+  "environment": "Preserved Linux SH GCC 14.1.0, frozen LTO link inputs",
+  "method": "Recompiled runtime replacements and linked each payload in a new output directory. Applied the 512-byte external header, then compared full-file SHA-256 to the historic release.",
+  "deviceTest": false,
+  "outcomes": {
+    "giac-699": "176a10ffa918f24f0b98ef89156dc04b02df09190dae0fbe0e3d59780e9455f8",
+    "giac-701-preview": "9bf1f428909690721793a50128fbdc65207b3ce9390a89bcf4b361e15cafa596"
+  }
+}

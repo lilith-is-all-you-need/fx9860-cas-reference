@@ -1,0 +1,32 @@
+{
+  "giac-699": {
+    "pages": 699,
+    "files": {
+      "KhiMap.g1a": {
+        "sha256": "45b3021c77663b2d955480a3d230c1c8fb97bccea9ca8b161c11f0d3d4a760c8",
+        "bytes": 9880
+      },
+      "KHICAS.BIN": {
+        "sha256": "176a10ffa918f24f0b98ef89156dc04b02df09190dae0fbe0e3d59780e9455f8",
+        "bytes": 2859236
+      }
+    },
+    "hardware": "first launch reported; same-icon MENU re-entry issue reported",
+    "source": "integrations/mapped-cas-20261116/"
+  },
+  "giac-701-preview": {
+    "pages": 701,
+    "files": {
+      "KhiMap.g1a": {
+        "sha256": "f4caa94a842a7bcdf740235a6edaa90fff51d43b50fce4e128d3fde956a52599",
+        "bytes": 9860
+      },
+      "KHICAS.BIN": {
+        "sha256": "9bf1f428909690721793a50128fbdc65207b3ce9390a89bcf4b361e15cafa596",
+        "bytes": 2867576
+      }
+    },
+    "hardware": "emulator and host tests; awaiting physical acceptance",
+    "source": "integrations/preview-kernel-20261117/"
+  }
+}

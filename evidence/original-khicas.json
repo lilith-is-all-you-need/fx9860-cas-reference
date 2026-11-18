@@ -1,0 +1,11 @@
+{
+  "bytes": 2094444,
+  "sha256": "4a9d1c18009d987dc7c8745b7fc099b3c6e8006ebbb2ee5e4b483934be757473",
+  "reservedRam": [
+    "0x88051000",
+    "0x8807D000"
+  ],
+  "endExclusive": true,
+  "genericFlashLd": "192267a7f30b2cf98e3bfda064999106e1912fac0a9f8758b39deb900f207abd",
+  "hardware": "user confirmed pre-launch refusal on generic build; legacy dedicated adapter first launch reported separately"
+}

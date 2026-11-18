@@ -1,0 +1,70 @@
+--- accepted/ksym2poly.cc
++++ preview/ksym2poly.cc
+@@ -25,6 +25,7 @@
+ using namespace std;
+ #include <fstream>
+ #include <string>
++#include <memory>
+ #include "gen.h"
+ #include "sym2poly.h"
+ #include "usual.h"
+@@ -1918,7 +1919,8 @@
+       return gensizeerr(gettext("sym2poly/r2sym(const gen & e,const index_m & i,const vecteur & l)"));
+     vecteur::const_iterator l_it=l.begin();
+     index_t::const_iterator it=i.begin(),itend=i.end();
+-    ref_vecteur * res=new_ref_vecteur(0);
++    std::unique_ptr<ref_vecteur,void (*)(ref_vecteur *)> owner(new_ref_vecteur(0),&delete_ref_vecteur);
++    ref_vecteur * res=owner.get();
+     res->v.reserve(itend-it+1);
+     bool negatif=false;
+     if (!is_one(e) || (e.type==_MOD) ){
+@@ -1935,10 +1937,9 @@
+ 	res->v.push_back(pow(*l_it,*it));
+     }
+     if (res->v.empty()){
+-      delete_ref_vecteur(res);
+       return e;
+     }
+-    return niceprod(res,negatif);
++    return niceprod(owner.release(),negatif);
+   }
+ 
+   static gen r2sym2(const polynome & p, const vecteur & l,GIAC_CONTEXT){
+@@ -1946,19 +1947,19 @@
+     monomial_v::const_iterator itend=p.coord.end();
+     if (itend-it==1)
+       return r2sym(it->value,it->index,l,contextptr);
+-    ref_vecteur * res=new_ref_vecteur(0);
++    std::unique_ptr<ref_vecteur,void (*)(ref_vecteur *)> owner(new_ref_vecteur(0),&delete_ref_vecteur);
++    ref_vecteur * res=owner.get();
+     res->v.reserve(itend-it);
+     for (;it!=itend;++it){
+       res->v.push_back(r2sym(it->value,it->index,l,contextptr)) ;
+     }
+     if (res->v.size()==1){
+       gen tmp=res->v.front();
+-      delete res;
+       return tmp;
+     }
+     if (increasing_power(contextptr)) 
+       vreverse(res->v.begin(),res->v.end());
+-    return symbolic(at_plus,gen(res,_SEQ__VECT));
++    return symbolic(at_plus,gen(owner.release(),_SEQ__VECT));
+   }
+ 
+   gen r2sym(const polynome & p, const vecteur & l,GIAC_CONTEXT){
+@@ -2001,11 +2002,12 @@
+ 
+   gen r2sym(const vecteur & v,const vecteur & l,GIAC_CONTEXT){
+     const_iterateur it=v.begin(),itend=v.end();
+-    ref_vecteur * res=new_ref_vecteur(0);
++    std::unique_ptr<ref_vecteur,void (*)(ref_vecteur *)> owner(new_ref_vecteur(0),&delete_ref_vecteur);
++    ref_vecteur * res=owner.get();
+     res->v.reserve(itend-it);
+     for (;it!=itend;++it)
+       res->v.push_back(r2sym(*it,l,contextptr));
+-    return res;
++    return gen(owner.release());
+   }
+ 
+   static gen r2sym(const gen & p, const const_iterateur & lt, const const_iterateur & ltend,GIAC_CONTEXT);
