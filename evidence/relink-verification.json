@@ -6,5 +6,10 @@
   "outcomes": {
     "giac-699": "176a10ffa918f24f0b98ef89156dc04b02df09190dae0fbe0e3d59780e9455f8",
     "giac-701-preview": "9bf1f428909690721793a50128fbdc65207b3ce9390a89bcf4b361e15cafa596"
+  },
+  "isolatedSnapshot": {
+    "archiveSha256": "1fd9aaa67e7d87243332fcad523e5e4f2f53e81d559159dd3f857a1a4a7b6f6c",
+    "procedure": "In a fresh Linux mount namespace, only the extracted release snapshot was visible at /root/khicas-work. The installed historical cross toolchain was supplied separately. Ran tools/relink.py --run for both variants, prepended each external header and verified each digest against evidence/builds.json.",
+    "bothVerified": true
   }
 }

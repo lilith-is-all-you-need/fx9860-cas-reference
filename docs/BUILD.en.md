@@ -8,3 +8,5 @@ Run python tools/relink.py --variant 699 --output NEW_DIR to inspect the plan, t
 
 
 On 2026-11-19 both payloads were relinked in the preserved Linux environment. After the 512-byte header was added, both whole-file digests matched the recorded historical releases. The original-KhiCAS preparation script was also exercised against the matching original. [SHA-256](../evidence/relink-verification.json)
+
+A separate verification exposed only the freshly extracted release snapshot at /root/khicas-work in an isolated mount namespace. Using the installed historical compiler, tools/relink.py reproduced both payload SHA-256 digests again.
